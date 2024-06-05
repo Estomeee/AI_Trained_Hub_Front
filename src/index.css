@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+
+  --link-color: #1874cf;
+  --link-color-light: #cdedff;
+  --link-color-lightest: #dfeff9;
+
+  --grey-color-100: #000000;
+  --grey-color-200: #222222;
+  --grey-color-300: #3d3d3d;
+  --grey-color-400: #757575;
+  --grey-color-500: #adadad;
+  --grey-color-600: #d6d6d6;
+  --grey-color-700: #e6e6e6;
+  --grey-color-800: #f0f0f0;
+
+  --grey-transparent-color-100: rgba(0, 0, 0, 0.92);
+  --grey-transparent-color-200: rgba(0, 0, 0, 0.80);
+  --grey-transparent-color-300: rgba(0, 0, 0, 0.68);
+  --grey-transparent-color-400: rgba(0, 0, 0, 0.54);
+  --grey-transparent-color-500: rgba(0, 0, 0, 0.32);
+  --grey-transparent-color-600: rgba(0, 0, 0, 0.16);
+  --grey-transparent-color-700: rgba(0, 0, 0, 0.1);
+  --grey-transparent-color-750: rgba(0, 0, 0, 0.08);
+  --grey-transparent-color-800: rgba(0, 0, 0, 0.06);
+
+  --white-color-100: #ffffff;
+  --white-color-200: rgba(255, 255, 255, 0.865);
+  --white-color-300: rgba(255, 255, 255, 0.48);
+  --white-color-400: rgba(255, 255, 255, 0.32);
+  --white-color-500: rgba(255, 255, 255, 0.16);
+  --white-color-600: rgba(255, 255, 255, 0.08);
+  --white-color-700: rgba(255, 255, 255, 0.04);
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--grey-color-200);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', Lab Grotesque, -apple-system, BlinkMacSystemFont, Arial, Liberation Sans, Nimbus Sans L, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
+a {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+button {
+  font-family: Lab Grotesque, -apple-system, BlinkMacSystemFont, Arial, Liberation Sans, Nimbus Sans L, sans-serif;
+  display: inline-block;
+  box-shadow: none;
+  background: transparent none;
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+}
+
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--grey-color-200);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 10px;
+}

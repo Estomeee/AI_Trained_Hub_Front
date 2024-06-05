@@ -1,0 +1,15 @@
+.pageWrapper {
+  width: 100%;
+  max-width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.pageContent {
+  margin: 0 auto;
+  padding: 64px 0 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
