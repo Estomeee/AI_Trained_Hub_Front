@@ -4,8 +4,8 @@ import { ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import AppTheme from "./AppTheme";
 import { MainLayout } from "./layouts/MainLayout/MainLayout";
-import IndexPage from "./pages/Index/IndexPage";
-import Name from "./pages/Name/Page";
+import Main from "./pages/Main/Main";
+import Error404Page from "./pages/Error404Page/Error404Page";
 
 export interface Page extends FC {}
 
@@ -22,10 +22,8 @@ export const Router: FC = () => {
 
   return (
     <Routes>
-      <Route index element={renderPage(IndexPage)} />
-      <Route path="/Name" element={renderPage(Name)} />
-
-      {/* <Route path="*" element={renderPage(Error404Page)} /> */}
+      <Route index element={renderPage(Main)} />
+      <Route path="*" element={renderPage(Error404Page)} />
     </Routes>
   );
 };

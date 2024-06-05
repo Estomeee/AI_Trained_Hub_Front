@@ -8,12 +8,12 @@ import {
   SelectChangeEvent,
 } from "@mui/material";
 import { useState } from "react";
-import classes from "./Page.module.scss";
+import classes from "./Main.module.scss";
 import { fileApi } from "../../api/reducers/fileApi";
 import { modelApi } from "../../api/reducers/modelApi";
 import { ButtonUpload } from "../../components/ButtonUpload/ButtonUpload";
 
-const Name: Page = () => {
+const Main: Page = () => {
   const [model, setModel] = useState<
     "classify" | "detect" | "pose" | "segment"
   >("classify");
@@ -120,4 +120,4 @@ const Name: Page = () => {
   );
 };
 
-export default Name;
+export default Main;
