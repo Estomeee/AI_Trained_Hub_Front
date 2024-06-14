@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  fileapi-app: 
+    container_name: fileapi
+    env_file:
+      - .env
+    build:
+      context: ./back
+      dockerfile: ./FileApi/Api/Dockerfile
+    ports:
+      - 10001:10001
+    networks:
+      - network
+
+  modelapi-app: 
+    container_name: modelapi
+    env_file:
+      - .env
+    build:
+      context: ./back
+      dockerfile: ./ModelPredictionApi/Api/Dockerfile
+    ports:
+      - 10002:10002
+    networks:
+      - network
+
+  frontend-nginx:
+    container_name: front
+    env_file:
+      - .env
+    environment:
+      - API_URL=http://webapi:10000
+    build:
+      context: ./front/
+      dockerfile: ./${FRONT_DOCKERFILE:-Dockerfile}
+    ports:
+      - ${FRONT_PORT:-80}:80
+    networks:
+      - network
+
+networks:
+  network:
+    external: true
