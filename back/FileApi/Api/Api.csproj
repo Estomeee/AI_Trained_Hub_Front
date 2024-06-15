@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Libs\Core\Core.csproj" />
+    <ProjectReference Include="..\..\Libs\HttpLogic\HttpLogic.csproj" />
     <ProjectReference Include="..\Dal\Dal.csproj" />
     <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>

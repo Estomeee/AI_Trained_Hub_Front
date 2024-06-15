@@ -3,7 +3,6 @@ using Api.Controllers.Dto.Response;
 using Api.Controllers.File.Dto.Request;
 using AutoMapper;
 using Dal.Helpers;
-using Dal.Repositories.FileRepository.Interfaces;
 using HttpLogic.Models;
 using Logic.Managers.File.Managers.Interfaces;
 using Logic.Records.File.Params;
@@ -55,12 +54,12 @@ public class FileController : ControllerBase
     /// Получить файл по id для межсервисного взаимодействия
     /// </summary>
     [HttpGet("download-private")]
-    [ProducesResponseType(typeof(FileHttpResponse), (int)HttpStatusCode.OK)]
+    [ProducesResponseType(typeof(HttpDownloadedFile), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetFileByIdPrivateAsync([FromQuery] GetFileRequest getFileRequest)
     {
         var file = await _fileManager.GetFileByIdAsync(getFileRequest.FileId);
 
-        var fileHttpResponse = new FileHttpResponse
+        var fileHttpResponse = new HttpDownloadedFile
         {
             FileNameWithExtension = $"{file.OriginalFileName}{file.FileExtension}",
             FileContent = file.FileBytes
